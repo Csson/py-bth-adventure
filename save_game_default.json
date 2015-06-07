@@ -1,0 +1,95 @@
+{
+   "added_to_room" : {
+      "little_house" : [],
+      "living_room" : [],
+      "stair" : [],
+      "crypt" : [],
+      "path_branch" : [],
+      "town" : [],
+      "forest" : [],
+      "garden" : [],
+      "hall" : [],
+      "cellar" : [],
+      "basement" : []
+   },
+   "room" : "path_branch",
+   "possible_navigation" : {
+      "living_room" : [
+         "hall"
+      ],
+      "little_house" : [],
+      "stair" : [
+         "living room",
+         "down"
+      ],
+      "crypt" : [
+         "back"
+      ],
+      "forest" : [
+         "garden"
+      ],
+      "town" : [],
+      "path_branch" : [
+         "left",
+         "right"
+      ],
+      "garden" : [
+         "inside"
+      ],
+      "cellar" : [
+         "back",
+         "black door"
+      ],
+      "hall" : [
+         "living room",
+         "outside"
+      ],
+      "basement" : [
+         "up",
+         "tic-tac-toe"
+      ]
+   },
+   "objects_in_room" : {
+      "path_branch" : [
+         "arrow-sign",
+         "left-path",
+         "right-path"
+      ],
+      "town" : [],
+      "forest" : [
+         "guard"
+      ],
+      "garden" : [
+         "ice-wall"
+      ],
+      "cellar" : [
+         "old-man"
+      ],
+      "hall" : [
+         "key-locker"
+      ],
+      "basement" : [
+         "table"
+      ],
+      "living_room" : [
+         "leather-sofa",
+         "sword",
+         "locked-red-door",
+         "window",
+         "bars"
+      ],
+      "little_house" : [
+         "bucket",
+         "young-woman"
+      ],
+      "stair" : [
+         "hammer",
+         "screwdriver"
+      ],
+      "crypt" : [
+         "rope",
+         "chandelier"
+      ]
+   },
+   "inventory" : []
+}

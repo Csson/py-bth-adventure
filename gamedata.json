@@ -1,0 +1,697 @@
+{
+   "objects" : [
+      {
+         "id" : "left-path",
+         "actions" : {
+            "look" : "That is one nice path."
+         },
+         "name" : "left path"
+      },
+      {
+         "actions" : {
+            "look" : "That is one nice path."
+         },
+         "name" : "right path",
+         "id" : "right-path"
+      },
+      {
+         "name" : "arrow",
+         "actions" : {
+            "look" : "It is an arrow-shaped piece of wood with an old spike through it.",
+            "pickup" : {
+               "comment" : "Might come in handy."
+            },
+            "kick" : {
+               "comment" : "It spins twice, and then return to its original position."
+            },
+            "move" : {
+               "comment" : "It spins once, and then return to its original position."
+            }
+         },
+         "text" : {
+            "original" : "Once, an arrow-shaped sign on a post had pointed to one of the paths, but a\nspike has come loose and the arrow now points straight down.",
+            "dropped" : "An arrow-shaped piece of wood lies on the ground. It looks somewhat familiar."
+         },
+         "id" : "arrow-sign"
+      },
+      {
+         "id" : "bucket",
+         "name" : "bucket",
+         "actions" : {
+            "kick" : {
+               "comment" : "\"Why did you do that? Now I need to fill it again\", the woman says."
+            },
+            "pickup" : {
+               "comment" : "Who doesn't want to carry around a bucket of water?"
+            },
+            "use" : [
+               {
+                  "comment" : "The table slowly receeds into the floor. Part of the back wall is tilted upwards and reveals a bigger room.",
+                  "with" : "table",
+                  "removes" : {
+                     "inventory" : [
+                        "bucket"
+                     ]
+                  },
+                  "added_navigation" : [
+                     "bigger room"
+                  ]
+               }
+            ],
+            "look" : "It's your standard bucket. Filled with clear and cold water."
+         },
+         "text" : {
+            "original" : "There is a bucket of water by the door.",
+            "dropped" : "Someone has put a bucket of water here."
+         }
+      },
+      {
+         "id" : "young-woman",
+         "actions" : {
+            "talk" : {
+               "comment" : "\"Hi!\", you say.\n\n\"The weather is turning bad. Come in\", she says, \"I'll give you shelter from the storm.\"",
+               "added_navigation" : [
+                  "inside"
+               ]
+            },
+            "look" : "She is a young woman.",
+            "kick" : {
+               "comment" : "That I will not do."
+            }
+         },
+         "name" : "young woman"
+      },
+      {
+         "actions" : {
+            "look" : "It's a locked door",
+            "move" : {
+               "comment" : "It's locked!"
+            },
+            "kick" : {
+               "comment" : "Ow! That hurt."
+            }
+         },
+         "name" : "locked red door",
+         "text" : {
+            "original" : "There is the opening back to the hall from whence you came, and a closed, red door in the opposite end of the room."
+         },
+         "id" : "locked-red-door"
+      },
+      {
+         "id" : "unlocked-red-door",
+         "text" : {
+            "original" : "There is the opening back to the hall from whence you came, and an open, red door in the opposite end of the room."
+         },
+         "name" : "unlocked red door",
+         "actions" : {
+            "look" : "It's an unlocked door",
+            "kick" : {
+               "comment" : "There's no use kicking in open doors."
+            },
+            "move" : {
+               "comment" : "I can't. It is stuck open."
+            }
+         }
+      },
+      {
+         "id" : "sword",
+         "text" : {
+            "original" : "On the mantlepiece, a sword is on display.",
+            "dropped" : "A nice sword lies abandoned on the ground."
+         },
+         "name" : "sword",
+         "actions" : {
+            "look" : "Its a beautiful sword. Written on the handle is the name Damocles.",
+            "use" : [
+               {
+                  "removes" : {
+                     "inventory" : [
+                        "sword"
+                     ],
+                     "crypt" : [
+                        "chandelier"
+                     ]
+                  },
+                  "reveals" : {
+                     "crypt" : [
+                        "candle",
+                        "broken-chandelier"
+                     ]
+                  },
+                  "comment" : "The chandelier crashes to the floor with a bang, only one candle is still lit. The sword gets\ntangled up in the rope and now hangs, pointy end down, from the ceiling. Out of reach.",
+                  "with" : "rope"
+               }
+            ],
+            "pickup" : {
+               "comment" : "I'm not sure if the lady of the house appreciates this, but I like it."
+            },
+            "move" : {
+               "comment" : "I should either pick it up or leave it be."
+            }
+         }
+      },
+      {
+         "text" : {
+            "original" : "A leather sofa is opposite the fireplace."
+         },
+         "name" : "leather sofa",
+         "actions" : {
+            "move" : {
+               "reveals" : {
+                  "living_room" : [
+                     "book"
+                  ]
+               },
+               "comment" : "That is one heavy sofa. Someone has dropped a book under it."
+            },
+            "look" : "I could sit in that sofa all day, listening to the fire and the rain outside."
+         },
+         "id" : "leather-sofa"
+      },
+      {
+         "id" : "book",
+         "text" : {
+            "dropped" : "A book lies on the ground. That's no place for a book.",
+            "original" : "There's a book next to the sofa."
+         },
+         "actions" : {
+            "move" : {
+               "comment" : "Sure, I can do that."
+            },
+            "pickup" : {
+               "comment" : "Some books are to be tasted, others to be swallowed, and some few\nto be chewed and digested. I wonder which type this book is."
+            },
+            "kick" : {
+               "commennt" : "Sure, I can do that."
+            },
+            "open" : {
+               "comment" : "\"Call me Ishmael!\"; well, that is one way to start a book. Not sure what\nthat has to do with whales."
+            },
+            "look" : "Moby Dick, by Herman Melville."
+         },
+         "name" : "book"
+      },
+      {
+         "actions" : {
+            "look" : "Through the window you see a beautiful garden.",
+            "kick" : {
+               "when" : {
+                  "removed" : "bars"
+               },
+               "added_navigation" : [
+                  "garden"
+               ],
+               "else" : {
+                  "comment" : "No use with the bars in the way."
+               },
+               "comment" : "The window breaks completely."
+            },
+            "open" : {
+               "comment" : "That is not possible."
+            }
+         },
+         "name" : "window",
+         "text" : {
+            "original" : "There is a window to the right of the fire place."
+         },
+         "id" : "window"
+      },
+      {
+         "id" : "bars",
+         "text" : {
+            "original" : "Bars on the outside of the window protect the house from burglars."
+         },
+         "name" : "bars",
+         "actions" : {
+            "look" : "The bars can only be opened from the outside."
+         }
+      },
+      {
+         "name" : "laughter",
+         "text" : {
+            "original" : "An evil laughter echoes from somewhere in the house."
+         },
+         "id" : "laughter"
+      },
+      {
+         "id" : "key-locker",
+         "name" : "key locker",
+         "actions" : {
+            "open" : {
+               "comment" : "Can't hurt to see what's inside the key locker.",
+               "reveals" : {
+                  "hall" : [
+                     "small-key"
+                  ]
+               }
+            },
+            "kick" : {
+               "comment" : "Can't reach it with my foot."
+            },
+            "move" : {
+               "comment" : "It doesn't move."
+            },
+            "look" : "A key locker, made for keys"
+         },
+         "text" : {
+            "original" : "There is a small key locker next to the door."
+         }
+      },
+      {
+         "id" : "small-key",
+         "text" : {
+            "original" : "A small key hangs on a hook in the key locker",
+            "dropped" : "A small key lies on the ground. That's a strange thing to drop."
+         },
+         "actions" : {
+            "look" : "It's a simple key.",
+            "use" : [
+               {
+                  "comment" : "That worked! The door is now open.",
+                  "with" : "locked-red-door",
+                  "removes" : {
+                     "living_room" : [
+                        "locked-red-door"
+                     ]
+                  },
+                  "added_navigation" : [
+                     "open red door"
+                  ],
+                  "reveals" : {
+                     "living_room" : [
+                        "unlocked-red-door"
+                     ]
+                  }
+               }
+            ],
+            "pickup" : {
+               "comment" : "A key can always come in handy."
+            }
+         },
+         "name" : "small key"
+      },
+      {
+         "text" : {
+            "dropped" : "Leaving a hammer lying around. Who does that, really?"
+         },
+         "name" : "hammer",
+         "actions" : {
+            "pickup" : {
+               "comment" : "I think that is a wise choice."
+            },
+            "look" : "If I had such a hammer, I could hammer all morning.",
+            "use" : [
+               {
+                  "added_navigation" : [
+                     "forest"
+                  ],
+                  "comment" : "Ah, the hammer works nicely as an ice axe.\n\nYou reach the top of the wall in no time at all.",
+                  "with" : "ice-wall"
+               }
+            ]
+         },
+         "id" : "hammer"
+      },
+      {
+         "id" : "screwdriver",
+         "text" : {
+            "dropped" : "A screwdriver on the ground. Think of the children."
+         },
+         "actions" : {
+            "look" : "An average looking screwdriver",
+            "use" : [
+               {
+                  "reveals" : {
+                     "inventory" : [
+                        "gold-coin"
+                     ]
+                  },
+                  "removes" : {
+                     "inventory" : [
+                        "screwdriver"
+                     ]
+                  },
+                  "with" : "old-man",
+                  "comment" : "\"Thank you!\", he gleams. \"Here, take this gold coin. Can you get me a candle so I can solve my crossword?\""
+               }
+            ],
+            "pickup" : {
+               "comment" : "I've always had a screw loose. Now I can fix that."
+            }
+         },
+         "name" : "screwdriver"
+      },
+      {
+         "id" : "table",
+         "actions" : {
+            "look" : "It's a table. Something funny about it, though.",
+            "move" : {
+               "comment" : "It budges a bit, but returns to its original position."
+            }
+         },
+         "name" : "table"
+      },
+      {
+         "actions" : {
+            "talk" : {
+               "comment" : "\"How are you?\", you ask politely.\n\n\"Gimme a drink, will ya!\", he says grumpily."
+            },
+            "look" : "Looks like he's been here a while."
+         },
+         "name" : "old man",
+         "id" : "old-man"
+      },
+      {
+         "name" : "gold coin",
+         "actions" : {
+            "use" : [
+               {
+                  "added_navigation" : [
+                     "town"
+                  ],
+                  "with" : "guard",
+                  "comment" : "\"Well, thank you!\", he says with his demeanor changed for the better, \"five minutes to town.\""
+               }
+            ],
+            "look" : "Strange, the face of the coin looks just like you."
+         },
+         "id" : "gold-coin"
+      },
+      {
+         "name" : "rope",
+         "actions" : {
+            "kick" : {
+               "comment" : "I'd just hurt myself."
+            },
+            "move" : {
+               "comment" : "It doesn't move much."
+            },
+            "look" : "That is one thick rope. And it is tied down with a Gordian knot, I can not untie that."
+         },
+         "id" : "rope"
+      },
+      {
+         "name" : "chandelier",
+         "actions" : {
+            "move" : {
+               "comment" : "Can't reach it."
+            },
+            "look" : "A beautiful chandelier hanging in the air."
+         },
+         "text" : {
+            "original" : "A lit chandelier is elevated by a thick rope tied to a ring fastened in the wall."
+         },
+         "id" : "chandelier"
+      },
+      {
+         "name" : "broken chandelier",
+         "actions" : {
+            "look" : "The once beautiful chandelier is now broken on the floor."
+         },
+         "text" : {
+            "original" : "A chandelier lies haphazardly on the floor, broken in two."
+         },
+         "id" : "broken-chandelier"
+      },
+      {
+         "id" : "candle",
+         "actions" : {
+            "move" : {
+               "comment" : "I see no point, but ok."
+            },
+            "pickup" : {
+               "comment" : "Ow! It burns, but ok."
+            },
+            "kick" : {
+               "comment" : "I don't want to burn down the house."
+            },
+            "use" : [
+               {
+                  "comment" : "\"Thank you! I only have one thing left in my crossword. 'The protagonist\nof Moby Dick, seven letters, _ _ H _ _ _ _', do you know it?\",",
+                  "with" : "old-man",
+                  "removes" : {
+                     "inventory" : [
+                        "candle"
+                     ]
+                  }
+               }
+            ],
+            "look" : "A burning candle."
+         },
+         "name" : "candle"
+      },
+      {
+         "actions" : {
+            "look" : "An ice wall in the middle of summer. What dark forces lives here?",
+            "kick" : {
+               "comment" : "Yeah, right."
+            },
+            "move" : {
+               "comment" : "Sure..."
+            }
+         },
+         "name" : "ice wall",
+         "id" : "ice-wall"
+      },
+      {
+         "id" : "guard",
+         "actions" : {
+            "look" : "He is a little bit grumpy.",
+            "kick" : {
+               "comment" : "That won't make him let us pass."
+            },
+            "move" : {
+               "comment" : "He is one big fellow. That won't work."
+            }
+         },
+         "name" : "guard"
+      },
+      {
+         "id" : "Elaine",
+         "actions" : {
+            "look" : "It's your good friend Elaine, mayor of the town.",
+            "talk" : {
+               "the_end" : 1,
+               "comment" : "\"Hi Elaine! Me and Guybrush were out in the woods today. We took a less\ntravelled path\", you say with a sigh, \"and that made all the difference. Who\nknows in what kind of trouble we would have ended up if we had taken the\nother path.\"\n\n\"Tell me all about it!\", Elaine says.\n\n\"Well, we went out this morning and found ourselves twenty miles out of town...\""
+            }
+         },
+         "name" : "Elaine"
+      }
+   ],
+   "rooms" : [
+      {
+         "id" : "path_branch",
+         "navigate" : {
+            "left" : {
+               "comment" : "You have chosen .................... wisely.",
+               "destination" : "little_house"
+            },
+            "right" : {
+               "comment" : "You have chosen .................... wisely.",
+               "destination" : "little_house"
+            }
+         },
+         "clues" : [
+            "The paths are equally nice, pick one.",
+            "You never know when you might need a piece of wood."
+         ],
+         "actions" : {
+            "look" : "A beautiful place in the forest. The arrow looks like it can fall off at any moment."
+         },
+         "intro" : "You went out one morning, and now you find yourself twenty miles out of town\non a narrow path deep in an unknown forest.\n\nSuddenly, you reach a spot where the path splits in two. The left, as far as\nyou can see, looks pleasant enough. The right, just as nice, but maybe a\nlittle grassier.\n\nOverall though, time had worn them just the same. You have a feeling that you\ncan not come back here, not all the way at least, so you want to choose wisely."
+      },
+      {
+         "actions" : {
+            "look" : "It's not just a house, it's a home."
+         },
+         "intro" : "Happy with your choice you walk down this nice, meandering path, passing meadows and creeks.\nYou have noticed that the path is getting narrower and the sky darker. \n\nThere rose before you a little house, and as the first drops rain fell you knock on the door.\n\nA young woman has opened the door.",
+         "navigate" : {
+            "inside" : {
+               "destination" : "living_room"
+            }
+         },
+         "clues" : [
+            "There might be something you need here",
+            "Have you said hi yet?"
+         ],
+         "id" : "little_house"
+      },
+      {
+         "intro" : "You find yourself alone in the living room.\nThere is a fire burning in the (somewhat broken) fireplace.",
+         "actions" : {
+            "look" : "A living room made for living in."
+         },
+         "clues" : [
+            "Where are all the books?",
+            "Does Damocles want his sword anymore?"
+         ],
+         "navigate" : {
+            "hall" : {
+               "destination" : "hall",
+               "comment" : "Might be interesting."
+            },
+            "open red door" : {
+               "comment" : "I wonder why the door was locked?",
+               "destination" : "stair"
+            },
+            "garden" : {
+               "comment" : "I think that is for the best.",
+               "destination" : "garden"
+            }
+         },
+         "id" : "living_room"
+      },
+      {
+         "id" : "hall",
+         "actions" : {
+            "look" : "Every home needs a hall."
+         },
+         "intro" : "The hall is a warm entrance to the house. A fire burns in the nearby living room.",
+         "navigate" : {
+            "living room" : {
+               "destination" : "living_room",
+               "comment" : "The living room"
+            },
+            "outside" : {
+               "comment" : "I've been there before.",
+               "destination" : "little_house"
+            }
+         },
+         "clues" : [
+            "Maybe there's a key in the key locker?"
+         ]
+      },
+      {
+         "navigate" : {
+            "living room" : {
+               "comment" : "Back to the warmth",
+               "destination" : "living_room"
+            },
+            "down" : {
+               "comment" : "Down below we go.",
+               "destination" : "basement"
+            }
+         },
+         "clues" : [
+            "How much wood could a woodchuck not chuck with that hammer?"
+         ],
+         "actions" : {
+            "look" : "A damp smell comes from the basement. The warmth of the fire in the\nliving room does not reach down there.\n\nThe tools appear well used."
+         },
+         "intro" : "There is a stairway to a basement. Some tools hang on a wall.",
+         "id" : "stair"
+      },
+      {
+         "id" : "basement",
+         "intro" : "The basement is darkly lit. In the middle of the room is a table and two chairs.\nA single piece of paper lies on the table. A pencil too.\n\n\"Lets play tic-tac-toe\", says Guybrush.",
+         "clues" : [
+            "There is something strange with the table.",
+            "You might want to play a game of tic-tac-toe."
+         ],
+         "navigate" : {
+            "bigger room" : {
+               "destination" : "cellar",
+               "comment" : "Ok."
+            },
+            "up" : {
+               "destination" : "stair",
+               "comment" : "Lets go up again"
+            },
+            "tic-tac-toe" : {
+               "destination" : "tic",
+               "comment" : "Not again, you think. \"Okay\", you say as you sit down to yet another match."
+            }
+         }
+      },
+      {
+         "id" : "cellar",
+         "actions" : {
+            "say" : [
+               {
+                  "removes" : {
+                     "living_room" : [
+                        "bars"
+                     ]
+                  },
+                  "reveals" : {
+                     "living_room" : [
+                        "laughter"
+                     ]
+                  },
+                  "what" : "Ishmael",
+                  "comment" : "A moment of silence, and then:\n\n\"Yes! That is it! I have been solving this crossword for ten years. We used to have the book\nin the house but I have not been able to find it.\"\n\nWith a sweeping motion of his red right hand, he adds:\n\n\"By the way, look at my work and despair\".\n\nNow you see that the bottles along the walls are not wine bottles, they are magic potions.\n\nAnd not of the good kind."
+               }
+            ],
+            "look" : "It is not the coziest of cellars."
+         },
+         "intro" : "It is a large wine cellar, old bottles lining the walls from floor to ceiling. There is no source\nof lightning in the room.\n\nThere is a black door to your right.\n\nAn old man sits in a chair.",
+         "navigate" : {
+            "black door" : {
+               "destination" : "crypt",
+               "comment" : "Ok."
+            },
+            "back" : {
+               "destination" : "basement",
+               "comment" : "Ok."
+            }
+         },
+         "clues" : [
+            "Have you talked to the old man?",
+            "Don't take everything literally."
+         ]
+      },
+      {
+         "clues" : [
+            "There's more than one way to skin a cat -- or in this case do something about that rope.",
+            "Have you seen anything sharp in the house?"
+         ],
+         "navigate" : {
+            "back" : {
+               "destination" : "cellar",
+               "comment" : "Ok."
+            }
+         },
+         "intro" : "You have entered a small crypt. There is an altar, a couple of benches and some icons on the walls.",
+         "id" : "crypt"
+      },
+      {
+         "id" : "garden",
+         "clues" : [
+            "Some tools are made for drinking, others for climbing."
+         ],
+         "navigate" : {
+            "forest" : {
+               "comment" : "Ok.",
+               "destination" : "forest"
+            },
+            "inside" : {
+               "destination" : "living_room",
+               "comment" : "Ok."
+            }
+         },
+         "intro" : "It is a beautiful garden, but after what just happened you do not feel comfortable.\n\nYou reach the end of the garden where there is a high wall made of ice."
+      },
+      {
+         "id" : "forest",
+         "navigate" : {
+            "garden" : {
+               "comment" : "Ok.",
+               "destination" : "garden"
+            },
+            "town" : {
+               "destination" : "town",
+               "comment" : "Ok."
+            }
+         },
+         "clues" : [
+            "Guards often want something."
+         ],
+         "intro" : "With the ice wall behind you, you and Guybrush run toward civilization.\n\nYou reach an old bridge over a fast river. An odd fellow with a wide brimmed hat, a grey coat\nand a walking stick stands guard in the middle of the bridge.\n\n\"You shall not pass!\", he growls with a voice as cold as ice."
+      },
+      {
+         "id" : "town",
+         "intro" : "You and Guybrush strolled merrily into town and found your friend the mayor, Elaine, sitting outside a café."
+      }
+   ],
+   "the_end" : "\n        \n                                                                                                                                      \n                                                                                               `                             @@       \n                                                                                              @@`                            @@       \n                                                                                  ``          @@      ,.                     @@`      \n       .,'#@@@@@@'     +@.                                                        @@          @@    @@@@@@@@@+;.             @@,      \n  ;@@@@@@@@@@@@@@+     @@,      @@                             @@@@@@@@@@@        @@@         @@`   @@#@@@@@@@@@@@`          #@:      \n  +@@@@@@@@,.`         @@.      @@                            +@@@@@@@@@@@       `@@@@        @@`   '@#    `,'#@@@@.         +@'      \n         @@            @@`     ,@@    @@   `.,                +@'                `@@@@:       @@,   .@@          #@@:        '@+      \n         @@            @@      #@'    @@@@@@@@'               ;@+                `@@:@@       ;@#    @@           #@@+       :@#      \n         @@            @@      @@`    @@@@@@@@                :@#                `@@ @@@      ,@@    @@            :@@,      .@@      \n         @@            @@      @@    .@@                      :@#                `@@  @@#     ,@@    @@.            ;@@      `@@      \n         @@            @@     `@@    ,@@                      ,@@                `@@  `@@.    ,@@    +@'             @@#      @@      \n         @@            @@+:`  ;@#    '@#                      .@@                `@@   '@@    .@@    :@@              @@      @@      \n         @@            @@@@@@@@@:    +@;                      `@@                `@@    @@'    @@     @@              @@'     @@      \n         @@            @@'@@@@@@     @@,                       @@                `@@    `@@`   @@     @@              .@@     @@      \n         @@`           @@     @@     @@`                       @@                `@@     #@@   @@     @@`              @@     @@      \n         @@`           @@    .@@     @@                        @@`               `@@      @@@  @@.    @@:              @@     @@      \n         @@           `@@    #@'     @@@@@@@@@                 @@@@@@@@@         `@@       @@  @@.    ;@#              @@     @@`     \n         @@           `@@    @@`     @@@@@@@@@#                @@@@@@@@@         `@@       @@' @@,    `@@              @@     @@.     \n         @@           .@@    @@      @@     `;                 @@                `@@       ,@@ @@,     @@              @@`    @@,     \n         @@           .@@    @@      @@                        @@                `@@        @@.@@,     @@              @@,    #@;     \n         @@           '@#   `@@      @@                        @@                `@@        '@@@@,     @@.             '@#    ;@#     \n         @@`          '@+   .@@      @@                        @@                `@@         @@@@,     @@,             `@@    ,@@     \n         #@'          .@,   `@@     .@@                        @@                 @@         ;@@@:     #@'             `@@    `@+     \n         :@@                 ,      .@@                        @@                 @@          @@@'     +@'             .@@            \n         :@@                        ,@@                        @@                 @@           @@@     +@'           :@@@+            \n          @:                        ,@@..`                     @@                .@@           @@@     +@+.......  +@@@@#             \n                                    `@@@@@@@@@;                @@`               ;@#           `@@     +@@@@@@@@@@@@@@,               \n                                     ,#@@@@@@@.                @@@+::,.  .:'     .@;                   :@@@@@@@@@@@#`          @@,    \n                                                               `@@@@@@@@@@@@+                                                  @@,    \n                                                                 ,'##@@@@@@'                                                          \n\n  Composed by Erik Carlsson 2015.\n\n\n        "
+}

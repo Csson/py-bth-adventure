@@ -1,0 +1,103 @@
+{
+    "added_to_room": {
+        "basement": [],
+        "cellar": [],
+        "crypt": [],
+        "forest": [],
+        "garden": [],
+        "hall": [],
+        "little_house": [],
+        "living_room": [],
+        "path_branch": [],
+        "stair": [],
+        "town": []
+    },
+    "inventory": [
+        "small-key",
+        "book",
+        "hammer",
+        "gold-coin"
+    ],
+    "objects_in_room": {
+        "basement": [
+            "table"
+        ],
+        "cellar": [
+            "old-man"
+        ],
+        "crypt": [
+            "rope",
+            "broken-chandelier"
+        ],
+        "forest": [
+            "guard"
+        ],
+        "garden": [
+            "ice-wall"
+        ],
+        "hall": [
+            "key-locker"
+        ],
+        "little_house": [
+            "young-woman"
+        ],
+        "living_room": [
+            "leather-sofa",
+            "window",
+            "unlocked-red-door",
+            "laughter"
+        ],
+        "path_branch": [
+            "arrow-sign",
+            "left-path",
+            "right-path"
+        ],
+        "stair": [],
+        "town": ["Elaine"]
+    },
+    "possible_navigation": {
+        "basement": [
+            "up",
+            "tic-tac-toe",
+            "bigger room"
+        ],
+        "cellar": [
+            "back",
+            "black door"
+        ],
+        "crypt": [
+            "back"
+        ],
+        "forest": [
+            "town",
+            "town"
+        ],
+        "garden": [
+            "inside",
+            "forest"
+        ],
+        "hall": [
+            "living room",
+            "outside"
+        ],
+        "little_house": [
+            "inside"
+        ],
+        "living_room": [
+            "hall",
+            "open red door",
+            "garden"
+        ],
+        "path_branch": [
+            "left",
+            "right"
+        ],
+        "stair": [
+            "living room",
+            "down"
+        ],
+        "town": []
+    },
+    "room": "town",
+    "starttime": 1433692831
+}
